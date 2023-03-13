@@ -1,0 +1,291 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Dangrek', cursive; */
+  background-color: #89c15e;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  width: 60%;
+  margin: 50px auto;
+  border: 2px solid #ffffff;
+  border-radius: 13px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title > h1 {
+  letter-spacing: 2px;
+  font-size: 36px;
+}
+
+.header-score {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.score-box {
+  background: #ffffff;
+  width: 139px;
+  height: 128px;
+  border-radius: 9px;
+  color: #656565;
+  padding: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.score {
+  font-size: 56px;
+  color: black;
+}
+
+.rules {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.rules-content-hide {
+  display: none;
+}
+
+.rules-content {
+  width: 350px;
+  background: #004429;
+  border: 7px solid #ffffff;
+  border-radius: 13px;
+  letter-spacing: 1px;
+  padding: 0 20px 30px 20px;
+  z-index: 99;
+}
+
+.rules-cross {
+  background: #ff0000;
+  border: 5px solid #ffffff;
+  font-family: "Dangrek";
+  font-weight: 400;
+  width: 55px;
+  height: 55px;
+  font-size: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 314px;
+  top: -20px;
+  cursor: pointer;
+}
+
+.rules-content > h2 {
+  font-weight: 500;
+  font-size: 26px;
+  margin: 30px;
+  text-align: center;
+}
+
+.rules-para {
+  margin: 10px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 8% 90%;
+  align-items: center;
+}
+
+.rules-para > div {
+  width: 8px;
+  height: 8px;
+  background-color: #ffd600;
+}
+
+.btn {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  width: 119px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+
+#show-rules-btn {
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+#next-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+.hide-next {
+  display: none;
+}
+
+.game-space {
+  width: 40%;
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+}
+
+.play-state .option-circle {
+  filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+  background: #ffffff;
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.play-state .fist {
+  border: 16px solid #0074b6;
+}
+
+.play-state .scissor {
+  border: 16px solid #bd00ff;
+}
+
+.play-state .hand {
+  border: 16px solid #ffa943;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.first-two-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.upper-bar {
+  border: 10px solid rgba(0, 0, 0, 0.64);
+  width: 205px;
+  height: 0px;
+}
+
+.left-bar {
+  border: 10px solid rgba(0, 0, 0, 0.64);
+  width: 250px;
+  height: 0px;
+  position: absolute;
+  transform: rotate(60deg);
+  top: 180px;
+  left: 5px;
+}
+
+.right-bar {
+  border: 10px solid rgba(0, 0, 0, 0.64);
+  width: 250px;
+  height: 0px;
+  position: absolute;
+  transform: rotate(-60deg);
+  right: 22px;
+  bottom: 180px;
+  z-index: -1;
+}
+
+/* result state design */
+.result-state {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+}
+
+.result-option-circle {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 0;
+  filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+  box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+}
+
+.result-state .circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.result-state .fist {
+  border: 16px solid #0074b6;
+}
+
+.result-state .scissor {
+  border: 16px solid #bd00ff;
+}
+
+.result-state .hand {
+  border: 16px solid #ffa943;
+}
+
+.result-text {
+  text-align: center;
+}
+
+.result-text > h3 {
+  font-size: 36px;
+}
+
+.result-text > p {
+  font-size: 20px;
+  letter-spacing: 1.9px;
+  font-weight: 500;
+}
+
+.result-text .play-again-btn {
+  margin-top: 20px;
+  color: #6b6b6b;
+  background: #ffffff;
+  border-radius: 9px;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
