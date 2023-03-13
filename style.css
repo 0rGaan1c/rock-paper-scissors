@@ -268,6 +268,7 @@ a {
 
 .result-text {
   text-align: center;
+  margin-top: 100px;
 }
 
 .result-text > h3 {
@@ -288,4 +289,40 @@ a {
   font-size: 14px;
   padding: 10px;
   cursor: pointer;
+}
+
+.win {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #3b6720;
+    box-shadow: 0 0 0 0 #3b6720;
+  }
+  16.65% {
+    -moz-box-shadow: 0 0 0 20px rgba(29, 168, 43, 0.79);
+    box-shadow: 0 0 0 20px rgba(29, 168, 43, 0.79);
+  }
+  33.33% {
+    -moz-box-shadow: 0 0 0 40px rgba(29, 168, 43, 0.39);
+    box-shadow: 0 0 0 40px rgba(29, 168, 43, 0.39);
+  }
+  49.95% {
+    -moz-box-shadow: 0 0 0 60px rgba(46, 154, 37, 0.39);
+    background-color: white;
+    box-shadow: 0 0 0 60px rgba(46, 154, 37, 0.39);
+  }
+  66.6% {
+    -moz-box-shadow: 0 0 0 40px rgba(29, 168, 43, 0.79);
+    box-shadow: 0 0 0 40px rgba(29, 168, 43, 0.79);
+  }
+  83.25% {
+    -moz-box-shadow: 0 0 0 20px rgba(29, 168, 43, 0.79);
+    box-shadow: 0 0 0 20px rgba(29, 168, 43, 0.79);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 #3b6720;
+    box-shadow: 0 0 0 0 #3b6720;
+  }
 }

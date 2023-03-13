@@ -87,7 +87,9 @@ const updateGameSpaceUI = (result, playerChoice, computerChoice) => {
 	<div class="result-state">
 			<div class="circle-container">
 				<p>You Picked</p>
-				<div class="result-option-circle ${playerChoice}">
+				<div class="result-option-circle ${playerChoice} ${
+    result === "win" ? "win" : ""
+  }">
 					<img src="assets/${playerChoice}.png" alt="" />
 				</div>
 			</div>
@@ -102,7 +104,9 @@ const updateGameSpaceUI = (result, playerChoice, computerChoice) => {
 
 			<div class="circle-container">
 				<p>PC Picked</p>
-				<div class="result-option-circle ${computerChoice}">
+				<div class="result-option-circle ${computerChoice} ${
+    result === "lose" ? "win" : ""
+  }">
 					<img src="assets/${computerChoice}.png" alt="" />
 				</div>
 			</div>
