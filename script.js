@@ -118,6 +118,11 @@ const updateGameSpaceUI = (result, playerChoice, computerChoice) => {
 
   const playAgainBtn = getElement("play-again-btn");
   playAgainBtn.addEventListener("click", () => {
+    if (result === "tie") {
+      localStorage.setItem("computerScore", 0);
+      localStorage.setItem("playerScore", 0);
+      setLocalStorageAndUpdateUI();
+    }
     setPlayStateUI();
   });
 };
